@@ -9,49 +9,51 @@
 </head>
 
 <body>
-  <div class="mianbg  bg-[url('../assets/bgs/hero.png')] bg-cover bg-center min-w-[110vw] h-screen">
+  <div class="mianbg  bg-[url('../assets/bgs/hero.png')] bg-cover bg-center min-w-[120vw] h-screen">
     <!-- <div class="mianbg bg-[url('../assets/bgs/hero.png')] bg-cover bg-center h-[133vh]"> -->
 
 
     <nav class="flex">
       <div class="logo w-full ">
-        <img class="w-68 h-28" src="../assets/bgs/CredibleWhitelogo1.png" alt="">
+        <img class="w-64 h-24" src="../assets/bgs/CredibleWhitelogo1.png" alt="">
       </div>
-      <ul class="flex w-full mx-4 gap-10 justify-around items-center text-white">
+     
+      <ul  id="menu" class="hidden bg-black flex-col top-0 sm:flex w-full mx-4 gap-10 justify-around items-center text-white">
         <li><a href="">Send Now, Pay Later</a></li>
         <li><a href="">Buy Now, Pay Later</a></li>
         <li><a href="">Stablecoin Vault</a></li>
         <li><a href="">Prime</a></li>
         <li><a href="">Metrics</a></li>
       </ul>
+       <button id="menuBtn" class="sm:hidden text-white text-3xl ml-64"> ☰ </button>
     </nav>
-    <div class="bigt flex flex-col items-center mt-24  text-white sm:mt-60 ">
-      <h1 class="text-sm sm:text-7xl font-bold">Stable Yields.</h1>
-      <h1 class="text-sm sm:text-7xl font-bold"> Payments.</h1>
-      <p class="mt-3">The First Stablecoin Pay Later Protocol.</p>
+    <div class="bigt flex flex-col items-center mt-6  text-white sm:mt-24 ">
+      <h1 class="text-2xl sm:text-4xl font-bold">Stable Yields.</h1>
+      <h1 class="text-2xl sm:text-4xl font-bold"> Payments.</h1>
+      <p class="mt-3 text-xl sm:text-base">The First Stablecoin Pay Later Protocol.</p>
     </div>
     <div class="flex justify-center">
-      <button class="m-5 px-10 py-3 rounded-xl bg-[#ccff00]">Get Started</button>
+      <button class="m-5 px-5 py-2 mt-10 sm:px-10 sm:py-3 rounded-xl bg-[#ccff00]">Get Started</button>
     </div>
-    <div class="number_info flex justify-evenly w-full mt-4 ">
+    <div class="number_info flex justify-evenly w-full mt-4">
       <div class="infos">
-        <span class="text-white text-lg sm:text-4xl font-bold gap-5">$14,926,273 </span>
-        <p class="text-white flex justify-center">Loans Originated</p>
+        <span class="text-white text-xs sm:text-xl font-bold gap-5">$14,926,273 </span>
+        <p class="text-white text-xs flex justify-center">Loans Originated</p>
       </div>
       <div class="infos">
-        <span class="text-white text-lg sm:text-4xl font-bold gap-5">$16,117,576
+        <span class="text-white text-xs sm:text-xl font-bold gap-5">$16,117,576
         </span>
-        <p class="text-white flex justify-center">TVL</p>
+        <p class="text-white text-xs flex justify-center">TVL</p>
       </div>
       <div class="infos">
-        <span class="text-white text-lg sm:text-4xl font-bold gap-5">$499,111
+        <span class="text-white text-xs sm:text-xl font-bold gap-5">$499,111
         </span>
-        <p class="text-white flex justify-center">Repaid</p>
+        <p class="text-white text-xs flex justify-center">Repaid</p>
       </div>
       <div class="infos">
-        <span class="text-white text-lg sm:text-4xl font-bold gap-5">$381,261
+        <span class="text-white text-xs sm:text-xl font-bold gap-5">$381,261
         </span>
-        <p class="text-white flex justify-center">Users</p>
+        <p class="text-white text-xs flex justify-center">Users</p>
       </div>
     </div>
     <!-- <div class="cbg w-full bg-[linear-gradient(to_bottom,#0000,#fff)] h-40 mt-30">
@@ -86,12 +88,12 @@
 
   <div class="cion-info mt-7 w-full h-screen m-10 p-10 ">
     <div class="cion-head-info">
-      <h1 class="text-4xl flex justify-center">Stablecoin Payment Financing for the Real World</h1>
-      <p class=" flex justify-center">Credible brings on-chain credit to consumers and institutions for fast, borderless
+      <h1 class="text-xl flex justify-center sm:text-4xl">Stablecoin Payment Financing for the Real World</h1>
+      <p class=" flex text-sm justify-center">Credible brings on-chain credit to consumers and institutions for fast, borderless
         payments.</p>
     </div>
 
-    <div class="cardds flex justify-around  gap-10 m-16 ">
+    <div class="cardds flex flex-col sm:flex-row justify-around  gap-10 m-16 ">
       <div class="card min-h-[550px] min-w-[123px] max-w-xl bg-amber-200 rounded-3xl">
         <div class="flex justify-center m-3 p-4">
           <img class=" w-[223px] h-[250px] " src="../assets/bgs/diamond 1.png" alt="">
@@ -134,6 +136,15 @@
       },
       allowTouchMove: false, // optional (no swipe)
     });
+
+    // hambuger script
+     const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+    btn.textContent = btn.textContent === "☰" ? "✕" : "☰";
+  });
   </script>
 
 </body>
